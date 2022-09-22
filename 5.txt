@@ -1,0 +1,67 @@
+<!DocType Html>
+<html>
+<head>
+<title> Lab-5a Program </title>
+<script type="text/javascript">
+function formValidator()
+{
+var usnformat = /^[1-4][A-Z]{2}\d{2}[A-Z]{3}\d{2}$/;
+var usn = document.getElementById('t1').value;
+if (usn.length == 0)
+{
+alert(' Please Enter Your USN ');
+return false;
+}
+if(!usn.match(usnformat))
+{
+alert ('USN number is Wrong and format should be [DAADDAADDD ]');
+return false;
+}
+alert ('Entered USN is correct : ' + usn + '\n \t and');
+var today = new Date ();
+var month = today.getMonth ();
+var yno = usn[3] + usn[4];
+ switch (yno)
+{
+case "16":
+if (month >= 5)
+{
+alert('Student is in 1st Semester');
+}
+else
+{
+alert ('Student is in 2nd Semester');
+}
+break;
+case "15":
+if(month >= 5)
+{
+alert('Student is in 3rd Semester');
+}
+else
+{
+alert('Student is in 4th Semester');
+}
+break;
+case "14":
+if(month >= 5)
+{
+alert('Student is in 5th Semester');
+}
+else
+{
+alert('Student is in 6th Semester');
+}
+break;
+default: alert('Invalid Year No');
+}
+}
+</script>
+</head>
+<body>
+<form onsubmit="return formValidator()">
+Enter your USN: <input type="text" id="t1" required /> <br />
+<input type="submit" value="Check Field" />
+</form>
+</body>
+</html>

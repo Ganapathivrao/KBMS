@@ -1,0 +1,48 @@
+<!DocType html>
+<html>
+<body >
+<script type="text/javascript">
+var a=0, b=1, c=0;
+var num = prompt("Enter a number : ", " " );
+if( num!=null && num>0 )
+{
+document.write("<h1>" + num + " Fibonocci Series are </h1>");
+if( num == 1 )
+document.write( a );
+else
+document.write( a + "<br />" + b );
+for( i=3;i<=num; i++ )
+{
+c= a + b;
+document.write( "<br />" + c );
+a=b;
+b=c;
+}
+}
+else
+alert ("No Proper Input");
+</script>
+</body>
+</html>
+
+
+
+<!DocType html>
+<html>
+<body >
+<script type="text/javascript">
+var num = prompt("Enter a number : \n", "");
+if(num >0 && num !=null)
+{
+msgstr="Number and its Squares are \n";
+for(i=1;i <= num; i++)
+{
+msgstr = msgstr + i + " * " + i + " = " + i*i + "\n";
+}
+alert(msgstr)
+}
+else
+alert("No input supplied");
+</script>
+</body>
+</html>

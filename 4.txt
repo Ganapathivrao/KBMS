@@ -1,0 +1,162 @@
+<!DocType html>
+<head><title> Lab-4a Program </title>
+<script type="text/javascript">
+function apple()
+{
+if (c1.checked)
+alert("You are Selected Apple Fruits, Cost is 59 Rupees");
+else
+alert(" Apple is Removed from the Cart");
+}
+function orange()
+{
+if (c2.checked)
+alert("You are Selected Orange Fruits, Cost is 49 Rupees");
+else
+alert(" Orange is Removed from the Cart");
+}
+function banana()
+{
+if (c3.checked)
+alert("You are Selected Banana Fruits, Cost is 39 Rupees");
+else
+alert(" Banana is Removed from the Cart");
+}
+function calculate()
+{
+var c1 = document.getElementById("c1"); // Checkbox 1
+ c2 = document.getElementById("c2"); // Checkbox 2
+ c3 = document.getElementById("c3"); // Checkbox 3
+ total = 0; // Our starting total
+// If checked, add c1 value
+if (c1.checked)
+{ total += +c1.value; }
+// If checked, add c2 value
+if (c2.checked)
+{ total += +c2.value; }
+// If checked, add c3 value
+if (c3.checked)
+{ total += +c3.value; }
+tax = total * 0.05;
+tax = tax.toFixed(2);
+t1 = +tax + +total;
+alert(' Total Cost \t\t= ' + total +'\n Sales Tax(5%) \t= '+ tax
++'\n \n' + 'Your Total Cost \t= ' + t1 );
+}
+</script>
+</head>
+<body>
+<form method="">
+<h1> Welcome to Fruits shop </h1>
+<table>
+<tr>
+<td>
+<input type="checkbox" id="c1" value="59" onclick="apple()" /> Apple(59 /-)
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" id="c2" value="49" onclick="orange()" /> Orange(49/-)
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" id="c3"value="39" onclick="banana()" /> Banana(39/-)
+</td>
+</tr>
+</table>
+<input type="submit" value="submit" onclick="calculate()"/>
+</form>
+</body>
+</html>
+
+
+
+
+<!DocType html>
+<html>
+<head>
+<title> Lab-4b Program </title>
+<script type="text/javascript">
+function showhide1(c1)
+{
+var t1 = document.getElementById("t1");
+t1.style.display = c1.checked ? "block" : "none";
+}
+function showhide2(c2)
+{
+var t2 = document.getElementById("t2");
+t2.style.display = c2.checked ? "block" : "none";
+}
+{
+var t3 = document.getElementById("t3");
+t3.style.display = c3.checked ? "block" : "none";
+}
+function calculate()
+{
+var c1 = document.getElementById("c1"); // Checkbox 1
+c2 = document.getElementById("c2"); // Checkbox 2
+c3 = document.getElementById("c3"); // Checkbox 3
+ t1 = document.getElementById("t1");
+t2 = document.getElementById("t2");
+t3 = document.getElementById("t3");
+total = 0; // Our starting total
+ // If checked, add c1 value
+if (c1.checked)
+{
+total += +c1.value * t1.value;
+}
+ // If checked, add c2 value
+if (c2.checked)
+{
+total += +c2.value * t2.value;
+}
+ // If checked, add c3 value
+if (c3.checked)
+{
+total += +c3.value * t3.value;
+}
+ tax = total * 0.05;
+ tax = tax.toFixed(2);
+ t1 = +tax + +total;
+alert(' Total Cost \t\t= ' + total +'\n Sales Tax(5%) \t= '+ tax
++'\n \n' + 'Your Total Cost \t= ' + t1 );
+}
+</script>
+</head>
+<body>
+<form method="">
+<h1> Welcome to Fruits shop </h1>
+<table>
+<tr>
+<td>
+<input type="checkbox" name="c1" id="c1" value="59" onclick="showhide1(this)" />
+Apple(59 /-)
+</td>
+<td>
+<input type="text" id="t1" value="1" style="display:none;" size="2" />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" name="c2" id="c2" value="49" onclick="showhide2(this)" />
+Orange(49 /-)
+</td>
+<td>
+<input type="text" id="t2" value="1" style="display:none;" size="2" />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" name="c3" id="c3" value="39" onclick="showhide3(this)"/>
+Banana(39 /-)
+</td>
+<td>
+<input type="text" id="t3" value="1" style="display:none;" size="2" />
+</td>
+</tr>
+</table>
+<input type="submit" value="submit" onclick="calculate()"/>
+</form>
+</body>
+</html>

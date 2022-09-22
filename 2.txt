@@ -1,0 +1,104 @@
+<! DOCTYPE html>
+<html>
+<head><title>inline,external,internal style sheets</title>
+<link rel="stylesheet" href="external.css">
+<style type="text/css">
+p{font-size:24pt;color:green;}
+h1{color:cyan;font-size:20pt;}
+p . sem {font-size:22pt;
+ color:orange;}
+#d{color:violet;font-family:Ariel;}
+#e{color:red;font-size:30pt;}
+.web{font-family:'Times new Roman';color:"magenta";}
+*{color:red;text-align:center;}
+li.a { list-style-type: square; }
+.b { list-style-type: circle; }
+#c { list-style-type: upper-alpha; }
+#d { list-style-type: lower-alpha; }
+#e { list-style-type: upper-roman; }
+#w{list-style-type: lower-roman;}
+#q{list-style-type: decimal;}
+table,th{
+border-left-style: dotted;
+border-right-style: dashed;
+border-top-style: double;
+border-bottom-style: solid;
+border-left-width:thick;
+border-right-width:medium;
+border-top-width:thin;
+border-bottom-width:thick;
+border-left-color: red;
+ border-right-color : green;
+ border-top-color : red;
+ border-bottom-color : maroon;
+}
+p.two{
+ padding-left: 0.5in;
+ padding-right: 0.5in;
+ padding-top: 0.2in;
+ padding-bottom: 0.1in;
+
+ margin: 0.9in;
+ color: yellow;
+ }
+</style>
+</head>
+<body>
+<p style="font-size:24pt; color :blue"> This is inline style sheet</p>
+<h1 style="color:red;font-family: ‘Times new roman'">
+This is inline style sheet heading</h1>
+<p>This is internal style sheet paragraph</p>
+<h1 class="sem">This is the heading for internal style sheet but will not apply</h1>
+<p class="sem">This is the paragraph with class selector</p>
+<h1 id="#d">This is id selector</h1>
+<p class="web">This is generic selector</p>
+<h1 class="web">This paragraph also becomes magenta</h1>
+<p id="#e">WEB TECHNOLOGIES</p>
+<p> This is universal selector</p>
+<h1> This heading will also become center aligned</h1>
+<h3>This is external style sheet example</h3>
+<ul><li class="b"> I am Circle </li>
+</ul>
+<ol>
+<li id="c">Web</li>
+<li id="q">java</li>
+<li id="w">Software Engineering</li>
+<li id="e">Mobile application</li>
+<li id="d">dbms</li>
+</ol>
+<table border="5" cellspacing="7" cellpadding="7">
+<caption>Second sem exam</caption>
+<th>USN</th>
+<th>NAME</th>
+<th>ADDRESS</th>
+<th>PHONE NUMBER</th>
+<th>DOB</th>
+<tr>
+<td>1RX20MCA01</td>
+<td>AKSHAY</td>
+<td>BENGALURU</td>
+<td>7789456187</td>
+<td>2-3-95</td>
+ </tr>
+<tr>
+<td>1RX20MCA02</td>
+<td>AISHWARYA</td>
+<td>BENGALURU</td>
+<td>7789456188</td>
+<td>2-5-85</td>
+ </tr>
+ <tr>
+<td>1RX20MCA03</td>
+<td>BANU</td>
+<td>MYSORE</td>
+<td>7789451245</td>
+<td>1-3-21</td>
+ </tr>
+</table>
+
+<p class="two" style="background-color:green">This is padding and margin
+example</p>
+</body>
+</html>
+<li> I am Disc </li>
+<li class="a"> I am Square </li>

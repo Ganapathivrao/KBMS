@@ -1,0 +1,92 @@
+<! DocType html>
+<html>
+<head>
+<title> This is my lab1 program </title>
+</head>
+<body>
+<p> WELCOME TO RNSIT </p>
+<p id="top"> WELCOME TO RNSIT </p>
+<p> WELCOME TO MCA Department </p>
+<p>My Name is ABC, I am from MCA Department. < br />RNSIT ,Bangalore</p>
+<p align="right"> <a href ="#bottom">Bottom^</a></p>< br />
+<hr /> <hr />
+<pre> [ preserving whitespaces tag ] WELCOME TO</pre>RNSIT<hr /> <hr />
+<h1> [ Heading 1 tag ] WELCOME TO RNSIT </h1>
+<h2> [ Heading 2 tag ] WELCOME TO RNSIT </h2>
+<h3> [ Heading 3 tag ] WELCOME TO RNSIT </h3>
+<h4> [ Heading 4tag ] WELCOME TO RNSIT </h4>
+<h5> [ Heading 5 tag ] WELCOME TO RNSIT </h5>
+<h6> [ Heading 6 tag ] WELCOME TO RNSIT </h6>
+<hr /> <hr />
+<p> Swami Vivekananda says [ paragraph tag ]</p>
+<blockquote> "Arise..!! Awake..!!" [ blockquote tag (i am different from surrounded text ) ]
+</blockquote>
+<p> He is my Role model [ paragraph tag 8 ]</p>
+<hr /> <hr />
+<b> Font Styles and Sizes: </b>
+<br />
+<b> This is Bold </b> <br />
+<i> This is Italics </i> <br />
+<u> This is Underline </u> <br />
+<p> Content based tags are :</p>
+<em> This is Emphasis </em>
+<strong> This is strong </strong>
+<code> Total = Internals + Externals //this is code </code>
+<p>
+<pre>Illustration of Font Sizes (subscripts and superscripts)
+x<sub>2</sub><sup>3</sup> + y<sub>1</sub><sup>2</sup></pre></p>
+<hr /> <hr />
+<b> Character entities </b>
+<br />
+<p>
+<pre>Illustration of character entities if you get &gt; 70%, then you will get &quot; FCD
+&quot; if you get &lt; 35%, then you are &apos; Fail &apos;&frac12; of my classmates get
+very good marks &amp; Now, the temperature in Bangalore is 30&deg; C
+WELCOME &nbsp; &nbsp;&nbsp; TO &nbsp; &nbsp;&nbsp; RNSIT
+</pre>
+</p>
+<p id="bottom" align="right"><a href="#top">Top^</a></p>
+<hr /> <hr />
+<a href="lab1b.xhtml"> click to go form.xhtml </a>
+<br />
+<p> Metadata will not be displayed on the page, but will be machine parsable. </p>
+<meta name="book name" content="World Wide Web" />
+<meta name="Author" content="Robert W Sabesta" />
+<meta name="Publisher" content="Pearson" />
+<meta name="Edition" content="Fourth Edition" />
+</body>
+</html>
+
+<! DOCTYPE html>
+<head>
+<title> This is my lab1 program </title>
+</head>
+<body>
+<img src="Rajkumar.jpg" height="130" width="130" alt="Image not found" />
+<hr />
+<table border="border" cellspacing="5" cellpadding="10">
+<caption> Kannada Film Industry </caption>
+<tr>
+<th align="Center" colspan="4">Actors Details</th>
+</tr>
+<tr align="center">
+<th> Names</th>
+<th> Puneeth raj kumar </th>
+<th> Darshan Toogudeep </th>
+<th> Kichha Sudeep </th>
+</tr>
+<tr>
+<th>Ramya</th>
+<td align="left">Abhi</td>
+<td align="center">Datta</td>
+<td align="right">Matu</td>
+</tr>
+<tr>
+<th rowspan="2"> <br /> Rakshitha <br /> <br /> </th>
+<td >Appu</td>
+<td valign="top">Kalasipalya</td>
+<td valign="bottom">Kicha</td>
+</tr>
+</table>
+</body>
+</html>
