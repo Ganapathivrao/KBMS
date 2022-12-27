@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block body_block %}
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding:  4px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.body{
+padding:20px;
+margin: 10px;
+
+
+}
+</style>
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+</head>
+<body>
+{% load crispy_forms_tags %}
+<div class="container" style="min-height: 280px;">
+  <div class="col-12">
+      {% if results %}
+    <div class="row">
+        {% for article in results %}
+        <div class="col-sm-4 pb-4">
+            <div class="card ">
+              <div class="container text-center pb-2 px-3 ">
+
+                <h4 class="card-title border-bottom pb-3" style="font-family: Aclonica;">{{article.title}} <a href="#" class="float-right d-inline-flex share"></a></h4>
+              <h5 class="text-justify"> {{article.summary}} </h5>
+                  <small class="text-muted float-left"> created on {{article.date}}</small><br>
+                <a href="{% url 'user:articledetail' pk=article.pk %}" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right align-middle"></i></a>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h3>No article found for {{request.GET.searchtext}}</h3>
+        <h3>Please visit below link and send your query  we will address with in 24 hours!!</h3>
+        <a href="{% url 'user:questionform' %}" class="btn btn-warning">Question</a>
+        {% endif %}
+  </div>
+{% endblock %}

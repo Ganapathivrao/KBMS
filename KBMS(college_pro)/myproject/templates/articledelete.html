@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load crispy_forms_tags %}
+{% if user.is_superuser %}
+<form method="POST">
+    {% csrf_token %}
+  <h4>Are you confirm to delete this Article {{user.username}}?</h4>
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <a href="{% url 'user:dashboard' %}" class="btn btn-primary">Cancel</a>
+</form>
+{% else %}
+<div>
+    <h2 style="color:red;">Only Admin can Access this page!!</h2>
+</div>
+{% endif %}
+{% endblock %}
+</body>

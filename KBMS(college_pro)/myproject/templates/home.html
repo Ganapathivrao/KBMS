@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block body_block %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Project</title>
+  </head>
+<body>
+<center><img src="https://dcassetcdn.com/design_img/2519833/638366/638366_13501072_2519833_e4268939_image.jpg" style="height: 300px;"></center>
+
+{% if user.is_superuser is not True %}
+<h2><center>ASK ME A QUESTION REGARDING TO COMPUTER SCIENCE .....</center></h2>
+</div>
+<!-- Search Box -->
+<center>
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container">
+        <div class="row">
+             <div class="col-12">
+             </div>
+        </div>
+    </div>
+</nav>
+<div class="container container-fluid">
+    <form class="form-inline" method="GET" action="{% url 'user:articlelist' %}" >
+      {% csrf_token %}
+      <input class="form-control mr-sm-2" type="search" placeholder="type your question here..."  style="width:700px; height: 50px; " name="searchtext" aria-label="type your question here..."  required="required">
+      <button class="btn btn-outline-success"  style=" height: 50px; " type="submit" name="submit" value="search" >Search</button>
+    </form>
+</div>
+	{% else %}
+		<div>
+			<center><a href="{% url 'user:dashboard' %}" class="btn btn-primary">Dashboard</a><center>
+		</div><br>
+	{% endif %}
+    <div class="container">
+<!-- How it works -->
+<div id="values" class="container-fluid py-2" >
+
+		<center>
+	        <div class="row col-11">
+	            <div class="col-sm-6 col-xs-12">
+	                <div class="container-fluid px-0">
+	                	<img class="third" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" style="height: 400px; width: 500px;" alt="third-image">
+	                </div>
+	            </div>
+	 	        <div class="col-sm-6 col-xs-12" id="work">
+		            <div class="container-fluid rounded bg-light text-justify py-3">
+
+<h4><b>HOW IT WORKS:</b></h4>
+					<p>
+				<p><i>The platform is designed to support you get the best of guidance on issues related to Computer Science</i></p>
+					<i class="fas fa-hand-point-right"></i> <b></b>
+					Feel free to ask questions related to Computer Science. We will get back to you right in a second.
+					<br>
+					<i class="fas fa-hand-point-right"></i> <b></b>
+					The database designed here will have your answer to your question. The answer will be in your own native language.
+
+					<br>
+					<i class="fas fa-hand-point-right"></i> <b> </b>
+					The answer will be written in a word file where you will be able to dowload the file and you may go through to solve your issue.
+					</p>
+                         </div>
+	                </div>
+		        </div>
+	        </div>
+		</center>
+<!-- Our Vision -->
+	<div id="values" class="container-fluid py-2" >
+		<center>
+	        <div class="row col-11">
+	            <div class="col-sm-6 col-xs-12">
+	                <div class="container-fluid px-0">
+	                	<img class="first" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="first-image">
+	                </div>
+	            </div>
+	 	        <div class="col-sm-6 col-xs-12">
+		            <div class="container-fluid rounded bg-light text-justify py-3">
+
+                         <div class="container-fluid" id="vision">
+
+<h4><b>OUR VISION</b></h4>
+	  <p>As you finish the first draft of your essay, it is a good idea to have a second set of eyes look at it. Our editors will edit your essay for word choice, sentence structure, tone, and clarity, and they will make suggestions on organization and structure. We will provide helpful comments to let you know where you can improve your arguments and strengthen your paper, and we'll also fix typos and spelling and grammar errors.
+This is the expert essay editing support you can't get from your friends or your busy instructor. Best of all, you can learn from the edit because you'll be able to see all the changes that have been made, which will help make you a better writer. The great point is that you can be in contact with our editors where they may raise questions on your essays. As it is personal essay, the editor can not add anything from his own perspective. </p>
+
+                    </div>
+	                </div>
+		        </div>
+	        </div>
+		</center>
+	</div>
+
+
+
+<!-- Our mission -->
+	<div id="values" class="container-fluid py-2" >
+		<center>
+	        <div class="row col-11">
+	            <div class="col-sm-6 col-xs-12">
+	                <div class="container-fluid px-0 text-justify" id="mission">
+	                	<h2 class="header text-center">Our Mission</h2>
+                         <div class="container-fluid">
+                         	<h4 class="ml-3"><i class="fas fa-hand-point-right"></i> Quality</h4>
+                           <div class="container-fluid" id="mission">
+We provide quality services, improve the quality of our clients' work, and work with high-quality editors. We will connect clients with their respective editors where they can ask and answer questions through our own developed technology,<b> "Chatroom"</b>
+
+                            <h4><i class="fas fa-hand-point-right mt-3"></i> Accuracy</h4>
+
+                            We pay attention to detail throughout the ordering, editing, and quality assurance processes.
+
+                            <h4><i class="fas fa-hand-point-right mt-3"></i> Opportunity</h4>
+
+    							We create opportunities, both for our clients and our editors.
+
+                            <h4><i class="fas fa-hand-point-right mt-3"></i> Technology</h4>
+
+    							We embrace technology, ensuring that our operations run smoothly and allowing us to adapt quickly in an ever-changing industry.
+    						</div>
+
+                         </div>
+	                </div>
+	            </div>
+	 	        <div class="col-sm-6 col-xs-12">
+		            <div class="container-fluid rounded bg-light  py-3">
+		            	<img class="second" src="https://images.unsplash.com/photo-1496354382709-25495428b2c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="second-image">
+
+	                </div>
+		        </div>
+	        </div>
+		</center>
+	</div>
+
+<!-- Our Vision -->
+</div>
+			</div>
+
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+{% include "layout.html" %}
+</body>
+{% endblock %}

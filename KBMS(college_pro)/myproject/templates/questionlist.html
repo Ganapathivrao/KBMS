@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if user.is_superuser %}
+<center><h2>Pending Querys</h2></center><br>
+<ol>
+    {% for ques in userquestion %}
+    <a href="{% url 'user:articlecreate' %}"><li>{{ques.your_question}}(By <b>{{ques.your_name}} on {{ques.upload_date}}</b>)</li></a>
+    {% endfor %}
+</ol>
+{% else %}
+<div>
+    <h3 style="color:red;">Only Admin can Access this page!!</h3>
+</div>
+{% endif %}
+{% endblock %}
+</body>

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% if user.is_superuser %}
+<body class="container text-justify" >
+	<br><br>
+	<h1><center>ADMIN DASHBOARD</center></h1>
+			<div>
+				<p style="font-size: 20px; color: blue; font-style: italic;">
+				Dear <b> {{session.s_name}} </b>,<br>
+				<h5>Steps to be followed: </h5><br>
+				<i class="fas fa-check"></i> Please make sure the contact details you have provided are correct.<br>
+				<i class="fas fa-check"></i> You can publish your answers here using <b>ADD ANSWERS </b>.<br>
+
+				<i class="fas fa-check"></i>  Make sure to insert appropriate data inside your essay body.<br>
+
+				<i class="fas fa-check"></i> Please keep checking your inbox through <b>Chatroom</b>. In case the editor requires queries, you may interact through that too.</br>
+				<i class="fas fa-check"></i> You may delete your essays using <b>Delete</b> option.<br>
+				<i class="far fa-smile"></i> Your efforts are definitely appreciated. Thank you, {{session.s_name}}!
+
+				</p>
+
+
+			</div>
+
+			<div>
+					<table class="table table-striped table-bordered table-sm">
+
+						<tr>
+
+							<th> Title</th>
+							<th> Summary</th>
+							<th> Date</th>
+							<th></th>
+							<th></th>
+
+					</tr>
+								<center><a class="btn btn-success btn-block" href="{% url 'user:articlecreate' %}"> <i class="fas fa-plus"></i> ADD ANSWERS </a></center><br>
+
+
+					{% for dashboards in dashboard %}
+					<tr>
+					<td> {{dashboards.title}} </td>
+					<td> {{dashboards.summary}} </td>
+					<td> {{dashboards.date}} </td>
+						<td><a href="{% url 'user:articleupdate' pk=dashboards.pk %}" class="btn btn-secondary">Edit</a></td>
+						<td><a href="{% url 'user:articledelete' pk=dashboards.pk %}" class="btn btn-danger">Delete</a></td>
+
+					</tr>
+					{% endfor %}
+                    </table>
+				<a href="{% url 'user:questionlist' %}" class="btn btn-primary">Pending_Querys</a>
+            </div>
+{% else %}
+	<div>
+		<h3 style="color:red;">Only Admin(Superuser) can access Dashboard!!</h3>
+	</div>
+{% endif %}
+{% endblock %}
+</body>
